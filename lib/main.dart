@@ -60,49 +60,43 @@ class ProfilePage extends StatelessWidget {
               ),
 
               // Khoảng cách từ thanh điều hướng xuống ảnh đại diện
-              const SizedBox(height: 60),
+              const Spacer(flex: 2),
 
               // 2. Ảnh đại diện hình tròn (CircleAvatar)
               Center(
-                child: Container(
-                  padding: const EdgeInsets.all(4), // Tạo viền ngoài nhẹ
-                  decoration: BoxDecoration(
-                    color: Colors.blue.shade50,
-                    shape: BoxShape.circle,
-                  ),
                   child: const CircleAvatar(
-                    radius: 70, // Độ lớn của ảnh đại diện
-                    // Thay link ảnh bằng ảnh bất kỳ bạn muốn hoặc dùng NetworkImage mẫu dưới đây
+                    radius: 90, // Độ lớn của ảnh đại diện
                     backgroundImage: AssetImage('assets/images/ngua.jpg'),
                   ),
-                ),
               ),
 
               // Khoảng cách giữa ảnh và Tên
-              const SizedBox(height: 24),
+              const SizedBox(height: 26),
 
               // 3. Hiển thị Tên (Chữ đậm)
               const Text(
                 'Nguyễn Quốc Thái',
+                textAlign: TextAlign.center,
                 style: TextStyle(
-                  fontSize: 24,
+                  fontSize: 25,
                   fontWeight: FontWeight.bold,
                   color: Colors.black87,
                 ),
               ),
 
               // Khoảng cách nhỏ giữa Tên và MSSV
-              const SizedBox(height: 8),
+              const SizedBox(height: 3),
 
               // 4. Hiển thị Mã số sinh viên
               const Text(
                 'MSSV: 087206004822',
                 style: TextStyle(
-                  fontSize: 16,
-                  color: Colors.grey,
+                  fontSize: 20,
+                  color: Color.fromARGB(255, 88, 85, 85),
                   letterSpacing: 0.5,
                 ),
               ),
+              const Spacer(flex: 3),
             ],
           ),
         ),
